@@ -23,6 +23,7 @@
 		2285948018469F5600CF3D01 /* AcceleSenderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2285947F18469F5600CF3D01 /* AcceleSenderTests.m */; };
 		2285948C1846A56D00CF3D01 /* SDServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2285948B1846A56D00CF3D01 /* SDServerViewController.m */; };
 		2285948F1846A57600CF3D01 /* SDClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2285948E1846A57600CF3D01 /* SDClientViewController.m */; };
+		228594931846AFC000CF3D01 /* CMMotionManager+DataInject.m in Sources */ = {isa = PBXBuildFile; fileRef = 228594921846AFC000CF3D01 /* CMMotionManager+DataInject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		2285948B1846A56D00CF3D01 /* SDServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDServerViewController.m; sourceTree = "<group>"; };
 		2285948D1846A57600CF3D01 /* SDClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDClientViewController.h; sourceTree = "<group>"; };
 		2285948E1846A57600CF3D01 /* SDClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDClientViewController.m; sourceTree = "<group>"; };
+		228594911846AFC000CF3D01 /* CMMotionManager+DataInject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CMMotionManager+DataInject.h"; sourceTree = "<group>"; };
+		228594921846AFC000CF3D01 /* CMMotionManager+DataInject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CMMotionManager+DataInject.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,7 @@
 		2285945A18469F5500CF3D01 /* AcceleSender */ = {
 			isa = PBXGroup;
 			children = (
+				228594901846AF7500CF3D01 /* Simulator Overrides */,
 				228594891846A55B00CF3D01 /* ViewControllers */,
 				2285946318469F5500CF3D01 /* SDAppDelegate.h */,
 				2285946418469F5500CF3D01 /* SDAppDelegate.m */,
@@ -168,6 +172,15 @@
 				2285948E1846A57600CF3D01 /* SDClientViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		228594901846AF7500CF3D01 /* Simulator Overrides */ = {
+			isa = PBXGroup;
+			children = (
+				228594911846AFC000CF3D01 /* CMMotionManager+DataInject.h */,
+				228594921846AFC000CF3D01 /* CMMotionManager+DataInject.m */,
+			);
+			name = "Simulator Overrides";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228594931846AFC000CF3D01 /* CMMotionManager+DataInject.m in Sources */,
 				2285948C1846A56D00CF3D01 /* SDServerViewController.m in Sources */,
 				2285946118469F5500CF3D01 /* main.m in Sources */,
 				2285946B18469F5500CF3D01 /* SDViewController.m in Sources */,

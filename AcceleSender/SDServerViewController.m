@@ -9,11 +9,13 @@
 #import "SDServerViewController.h"
 @import MultipeerConnectivity;
 @import CoreMotion;
+#import "CMMotionManager+DataInject.h"
 
 @interface SDServerViewController () <MCSessionDelegate> {
     MCPeerID *_peerID;
     MCSession *_session;
     MCAdvertiserAssistant *_advertiserAssistant;
+    CMMotionManager *_motionManager;
 }
 
 @end
@@ -34,6 +36,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     [self startServer];
+    [self startLoggingAccelerometer];
 }
 
 - (void)startServer
@@ -47,6 +50,18 @@
     [_advertiserAssistant start];
 }
 
+- (void)startLoggingAccelerometer
+{
+    //[CMMotionManager enableInjection:YES];
+    if(!_motionManager) {
+        _motionManager = [[CMMotionManager alloc] init];
+    }
+    NSLog(@"Starting accelerometer logging...");
+    [_motionManager startAccelerometerUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAccelerometerData *accelerometerData, NSError *error) {
+        NSLog(@"From CoreMotion: %@", accelerometerData);
+    }];
+}
+
 - (IBAction)handleDismissPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
@@ -55,7 +70,7 @@
 - (void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID
 {
     CMAccelerometerData *accelerometerData = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    NSLog(@"Received: %@", accelerometerData);
+    [_motionManager postNewAccelerometerData:accelerometerData];
 }
 
 - (void)session:(MCSession *)session didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress
