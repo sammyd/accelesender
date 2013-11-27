@@ -21,6 +21,8 @@
 		2285947618469F5600CF3D01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2285945818469F5500CF3D01 /* UIKit.framework */; };
 		2285947E18469F5600CF3D01 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2285947C18469F5600CF3D01 /* InfoPlist.strings */; };
 		2285948018469F5600CF3D01 /* AcceleSenderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2285947F18469F5600CF3D01 /* AcceleSenderTests.m */; };
+		2285948C1846A56D00CF3D01 /* SDServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2285948B1846A56D00CF3D01 /* SDServerViewController.m */; };
+		2285948F1846A57600CF3D01 /* SDClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2285948E1846A57600CF3D01 /* SDClientViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		2285947B18469F5600CF3D01 /* AcceleSenderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AcceleSenderTests-Info.plist"; sourceTree = "<group>"; };
 		2285947D18469F5600CF3D01 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2285947F18469F5600CF3D01 /* AcceleSenderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcceleSenderTests.m; sourceTree = "<group>"; };
+		2285948A1846A56D00CF3D01 /* SDServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDServerViewController.h; sourceTree = "<group>"; };
+		2285948B1846A56D00CF3D01 /* SDServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDServerViewController.m; sourceTree = "<group>"; };
+		2285948D1846A57600CF3D01 /* SDClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDClientViewController.h; sourceTree = "<group>"; };
+		2285948E1846A57600CF3D01 /* SDClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDClientViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,10 @@
 		2285945A18469F5500CF3D01 /* AcceleSender */ = {
 			isa = PBXGroup;
 			children = (
+				228594891846A55B00CF3D01 /* ViewControllers */,
 				2285946318469F5500CF3D01 /* SDAppDelegate.h */,
 				2285946418469F5500CF3D01 /* SDAppDelegate.m */,
 				2285946618469F5500CF3D01 /* Main.storyboard */,
-				2285946918469F5500CF3D01 /* SDViewController.h */,
-				2285946A18469F5500CF3D01 /* SDViewController.m */,
 				2285946C18469F5500CF3D01 /* Images.xcassets */,
 				2285945B18469F5500CF3D01 /* Supporting Files */,
 			);
@@ -150,6 +155,19 @@
 				2285947C18469F5600CF3D01 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		228594891846A55B00CF3D01 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2285946918469F5500CF3D01 /* SDViewController.h */,
+				2285946A18469F5500CF3D01 /* SDViewController.m */,
+				2285948A1846A56D00CF3D01 /* SDServerViewController.h */,
+				2285948B1846A56D00CF3D01 /* SDServerViewController.m */,
+				2285948D1846A57600CF3D01 /* SDClientViewController.h */,
+				2285948E1846A57600CF3D01 /* SDClientViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2285948C1846A56D00CF3D01 /* SDServerViewController.m in Sources */,
 				2285946118469F5500CF3D01 /* main.m in Sources */,
 				2285946B18469F5500CF3D01 /* SDViewController.m in Sources */,
 				2285946518469F5500CF3D01 /* SDAppDelegate.m in Sources */,
+				2285948F1846A57600CF3D01 /* SDClientViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +481,7 @@
 				2285948518469F5600CF3D01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2285948618469F5600CF3D01 /* Build configuration list for PBXNativeTarget "AcceleSenderTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +490,7 @@
 				2285948818469F5600CF3D01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
